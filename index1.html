@@ -1,0 +1,57 @@
+<html>
+    <head>
+        <style>
+            input {
+                width: 100px;
+                height: 60px;
+            }
+        </style>
+        <script>  
+        function cal () {
+            var va1 = document.getElementById("v1").value;
+            var va2 = document.getElementById("v2").value;
+
+            var soma1 = document.getElementById("soma");
+            var div1 = document.getElementById("div");
+            var sub1 = document.getElementById("sub");
+            var mult1 = document.getElementById("mult");
+            var quad1 = document.getElementById("quad");
+
+            soma1.onclick = function(){
+                alert (parseInt(va1) + parseInt(va2));
+            }
+
+            div1.onclick = function(){
+                alert (parseInt(va1) / parseInt(va2));
+            }
+
+            sub1.onclick = function(){
+                alert (parseInt(va1) - parseInt(va2));
+            }
+
+            mult1.onclick = function(){
+                alert (parseInt(va1) * parseInt(va2));
+            }
+
+            quad1.onclick = function(){
+                alert (parseInt(va1) * parseInt(va1));
+            }
+        }
+        </script>
+    </head>
+    <body>
+        <input type="text" id="v1" style="width: 256px;" placeholder=" VALOR 1">
+        <input type="text" id="v2" style="width: 256px;" placeholder=" VALOR 2">
+    </br>
+    </br>
+    <div id="operações">
+        <input type="button" value="SOMAR" onclick="cal();" id="soma">
+        <input type="button" value="DIVIDIR" onclick="cal();" id="div">
+        <input type="button" value="SUBTRAIR" onclick="cal();" id="sub">
+        <input type="button" value="MULTIPLICAR" onclick="cal();" id="mult">
+        <input type="button" value="^2" onclick="cal();" id="quad">
+    </div>
+</br>
+    <span> Obs:. caso escolha elevar o número ao quadrado, digite apenas o primeiro valor.</span>
+    </body>
+</html>
